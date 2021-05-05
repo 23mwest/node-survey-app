@@ -17,11 +17,6 @@ router.get("/success", function (req, res) {
   res.render("blank", { title: "Success" });
 });
 
-/* GET Hello World page. */
-router.get("/insomnia", function (req, res) {
-  res.render("insomnia", { title: "Insomnia Severity Index" });
-});
-
 router.put("/survey/:userId", function (req, res) {
   var answers = [
     parseInt(req.body.Q1),
@@ -115,7 +110,7 @@ router.delete("/deletesurvey", function (req, res) {
     function (e, docs) {
       if (e) {
       } else {
-        res.redirect("helloworld");
+        res.redirect("success");
       }
     },
     { justOne: true }
