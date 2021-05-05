@@ -1,0 +1,7 @@
+pre-reqs:
+mongodb-community@4.0
+node
+
+run:
+npm install
+npm start

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <h3>Total score categories:</h3>
+    <ul>
+      <li>0–7 = No clinically significant insomnia</li>
+      <li>8–14 = Subthreshold insomnia</li>
+      <li>15–21 = Clinical insomnia (moderate severity)</li>
+      <li>22–28 = Clinical insomnia (severe)</li>
+    </ul>
+    <br />
+    <p>Name: <%= name %></p>
+    <p>Score: <%= score %></p>
+    <p>Confirmation Id: <%= id %></p>
+    <form method="get" action="/">
+      <button type="submit">Home</button>
+    </form>
+  </body>
+</html>

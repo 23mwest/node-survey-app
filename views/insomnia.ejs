@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <br />
+    <p>
+      The Insomnia Severity Index has seven questions. The seven answers are
+      added up to get a total score. When you have your total score, look at the
+      'Guidelines for Scoring/Interpretation' below to see where your sleep
+      difficulty fits. For each question, please CIRCLE the number that best
+      describes your answer. Please rate the CURRENT (i.e. LAST 2 WEEKS)
+      SEVERITY of your insomnia problem(s).
+    </p>
+    <br />
+    <form name="insomniaForm" method="post" action="/survey/<%= userId %>?_method=PUT">
+      <table>
+        <tr>
+          <th>Problem</th>
+          <th>None</th>
+          <th>Mild</th>
+          <th>Moderate</th>
+          <th>Severe</th>
+          <th>Very Severe</th>
+        </tr>
+        <tr>
+          <td>Difficulty falling asleep</td>
+          <td>
+            <label for="Q1-0">0</label>
+            <input type="radio" id="Q1-0" name="Q1" value="0" checked/>
+          </td>
+          <td>
+            <label for="Q1-1">1</label>
+            <input type="radio" id="Q1-1" name="Q1" value="1" />
+          </td>
+          <td>
+            <label for="Q1-2">2</label>
+            <input type="radio" id="Q1-2" name="Q1" value="2" />
+          </td>
+          <td>
+            <label for="Q1-3">3</label>
+            <input type="radio" id="Q1-3" name="Q1" value="3" />
+          </td>
+          <td>
+            <label for="Q1-4">4</label>
+            <input type="radio" id="Q1-4" name="Q1" value="4" />
+          </td>
+        </tr>
+        <tr>
+          <td>Difficulty staying asleep</td>
+          <td>
+            <label for="Q2-0">0</label>
+            <input type="radio" id="Q2-0" name="Q2" value="0" checked/>
+          </td>
+          <td>
+            <label for="Q2-1">1</label>
+            <input type="radio" id="Q2-1" name="Q2" value="1" />
+          </td>
+          <td>
+            <label for="Q2-2">2</label>
+            <input type="radio" id="Q2-2" name="Q2" value="2" />
+          </td>
+          <td>
+            <label for="Q2-3">3</label>
+            <input type="radio" id="Q2-3" name="Q2" value="3" />
+          </td>
+          <td>
+            <label for="Q2-4">4</label>
+            <input type="radio" id="Q2-4" name="Q2" value="4" />
+          </td>
+        </tr>
+        <tr>
+          <td>Problems waking up too early</td>
+          <td>
+            <label for="Q3-0">0</label>
+            <input type="radio" id="Q3-0" name="Q3" value="0" checked/>
+          </td>
+          <td>
+            <label for="Q3-1">1</label>
+            <input type="radio" id="Q3-1" name="Q3" value="1" />
+          </td>
+          <td>
+            <label for="Q3-2">2</label>
+            <input type="radio" id="Q3-2" name="Q3" value="2" />
+          </td>
+          <td>
+            <label for="Q3-3">3</label>
+            <input type="radio" id="Q3-3" name="Q3" value="3" />
+          </td>
+          <td>
+            <label for="Q3-4">4</label>
+            <input type="radio" id="Q3-4" name="Q3" value="4" />
+          </td>
+        </tr>
+        </tr>
+      </table>
+
+    <p>4. How SATISFIED/DISSATISFIED are you with your CURRENT sleep pattern? </p>
+    <label for="Q4-0">0 - Very Satisfied</label>
+    <input type="radio" id="Q4-0" name="Q4" value="0" checked/>
+    <br /> 
+    <label for="Q4-1">1 - Satisfied</label>
+    <input type="radio" id="Q4-1" name="Q4" value="1" />
+    <br />
+    <label for="Q4-2">2 - Moderately Satisfied</label>
+    <input type="radio" id="Q4-2" name="Q4" value="2" />
+    <br />
+    <label for="Q4-3">3 - Dissatisfied</label>
+    <input type="radio" id="Q4-3" name="Q4" value="3" />
+    <br />
+    <label for="Q4-4">4 - Very Dissatisfied</label>
+    <input type="radio" id="Q4-4" name="Q4" value="4" />
+
+    <p>5. How NOTICEABLE to others do you think your sleep problem is in terms of impairing the quality of your life? </p>
+    <label for="Q5-0">0 - Not at all Noticable</label>
+    <input type="radio" id="Q5-0" name="Q5" value="0" checked/>
+    <br /> 
+    <label for="Q5-1">1 -  A Little</label>
+    <input type="radio" id="Q5-1" name="Q5" value="1" />
+    <br />
+    <label for="Q5-2">2 - Somewhat</label>
+    <input type="radio" id="Q5-2" name="Q5" value="2" />
+    <br />
+    <label for="Q5-3">3 - Much</label>
+    <input type="radio" id="Q5-3" name="Q5" value="3" />
+    <br />
+    <label for="Q5-4">4 - Very Much Noticable</label>
+    <input type="radio" id="Q5-4" name="Q5" value="4" />
+. 
+    <p>6. How WORRIED/DISTRESSED are you about your current sleep problem? </p>
+    <label for="Q6-0">0 - Not at all Worried</label>
+    <input type="radio" id="Q6-0" name="Q6" value="0" checked/>
+    <br /> 
+    <label for="Q6-1">1 - A little</label>
+    <input type="radio" id="Q6-1" name="Q6" value="1" />
+    <br />
+    <label for="Q6-2">2 - Somewhat</label>
+    <input type="radio" id="Q6-2" name="Q6" value="2" />
+    <br />
+    <label for="Q6-3">3 - Much</label>
+    <input type="radio" id="Q6-3" name="Q6" value="3" />
+    <br/>
+    <label for="Q6-4">Very Much Worried</label>
+    <input type="radio" id="Q6-4" name="Q6" value="4" />          
+
+    <p>7. To what extent do you consider your sleep problem to INTERFERE with your daily functioning (e.g. daytime
+fatigue, mood, ability to function at work/daily chores, concentration, memory, mood, etc.) CURRENTLY? </p>
+    <label for="Q7-0">0 - Not at all Interfering</label>
+    <input type="radio" id="Q7-0" name="Q7" value="0" checked/>
+    <br/> 
+    <label for="Q7-1">1 - A little</label>
+    <input type="radio" id="Q7-1" name="Q7" value="1" />
+    <br/>
+    <label for="Q7-2">2 - Somewhat</label>
+    <input type="radio" id="Q7-2" name="Q7" value="2" />
+    <br/>
+    <label for="Q7-3">3 - Much</label>
+    <input type="radio" id="Q7-3" name="Q7" value="3" />
+    <br/>
+    <label for="Q7-4">4- Very Much Interfering</label>
+    <input type="radio" id="Q7-4" name="Q7" value="4" >
+    <br /> 
+    <br>        
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

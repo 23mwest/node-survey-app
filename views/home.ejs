@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p><%= title %></p>
+    <form method="post" name="newSurvey" action="/newsurvey">
+      <input type="text" name="name" placeholder="Name" />
+      <button type="submit" name="newSurvey" value="Submit">New Survey</button>
+    </form>
+    <form method="get" name="updateSurvey" action="/survey">
+      <input type="text" name="userId" id="updateSurveyBtn" placeholder="Id" />
+      <button type="submit" name="updateSurvey">Update Answers</button>
+    </form>
+    <form
+      name="deleteSurvey"
+      method="post"
+      action="/deletesurvey?_method=DELETE"
+    >
+      <input type="text" name="userId" id="resultsButton" placeholder="Id" />
+      <button type="submit" name="deleteSurvey">Delete Survey</button>
+    </form>
+    <form method="get" name="viewResults" action="/results">
+      <input type="text" name="userId" id="resultsButton" placeholder="Id" />
+      <button type="submit" name="viewResults">View Results</button>
+    </form>
+  </body>
+</html>
